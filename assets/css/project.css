@@ -216,12 +216,18 @@ nav ul li a {
 
 
 /* ================= HERO ================= */
-.hero-build {
+.hero-build   { background-image: url("../../img/build.jpg"); }
+.hero-grow    { background-image: url("../../img/grow.jpg"); }
+.hero-organize{ background-image: url("../../img/organize.jpg"); }
+
+.hero-build,
+.hero-grow,
+.hero-organize {
     height: 350px;
     background-size: cover;
     background-position: center;
-    position: relative;
 }
+
 
 .hero-image-overlay {
     position: absolute;
@@ -756,3 +762,4 @@ nav ul li a {
     text-decoration: underline;
 
 }
+
