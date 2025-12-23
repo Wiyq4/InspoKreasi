@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organize</title>
+    <link rel="stylesheet" href="assets/css/ask-diy.css">
+    <link rel="icon" type="image/x-icon" href="/img/white-logo.png">
+</head>
+<body>
+
+<header class="top-nav">
+
+    <div class="logo-section">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo2 (2).png" alt="Logo" class="logo-img"></a>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <div class="search-container">
+            <div class="search-bar" id="searchBar">
+                <svg class="search-svg" viewBox="0 0 24 24">
+                    <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+                </svg>
+                <input type="text" class="search-input" placeholder="Search DIY ideas here">
+            </div>
+
+            <!-- POPUP SEARCH BOX -->
+            <div class="search-popup" id="searchPopup">
+                <h3>POPULAR SEARCHES</h3>
+
+                <div class="popular-list">
+                    <span>Organize</span>
+                    <span>Build</span>
+                    <span>Upcycle</span>
+                    <span>Craft</span>
+                    <span>Decorate</span>
+                    <span>Grow</span>
+                    <span>Shaving Cream</span>
+                    <span>Storage</span>
+                    <span>Vinegar</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="explore-projects.html">Explore Projects ▾</a></li>
+            <li><a href="post-projects.html">+ Post Project</a></li>
+            <li><a href="ask-diy.html">Ask DIY Question</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="form-section ask-question-page">
+        <div class="content-wrapper">
+            <h2>Ask A DIY Question</h2>
+            
+            <div class="question-intro">
+                <p>Ask the community for advice, ideas, or solutions for your current DIY problem. Describe your situation clearly and attach photos or videos if possible!</p>
+            </div>
+
+            <form class="ask-form">
+                
+                <div class="form-group">
+                    <label for="question-title">Your Question Summary</label>
+                    <input type="text" id="question-title" placeholder="e.g., How can I fix a leaky faucet?" required class="input-title">
+                    <small>Keep it concise. Max 100 characters.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="question-details">Details of your situation</label>
+                    <textarea id="question-details" rows="8" placeholder="Describe the problem, the tools you have, and what solutions you've tried." required class="input-details"></textarea>
+                </div>
+
+                <div class="media-upload-area">
+                    <label>Add Supporting Media (Optional)</label>
+                    <div class="media-buttons">
+                        <button type="button" class="btn-media">📷 Add Photo</button>
+                        <button type="button" class="btn-media">🎥 Add Video</button>
+                        <button type="button" class="btn-media">🔗 Add Link</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="question-category">Select a Category (Optional)</label>
+                    <select id="question-category" class="input-select">
+                        <option value="">-- Select Category --</option>
+                        <option value="organize">Organize</option>
+                        <option value="build">Build</option>
+                        <option value="upcycle">Upcycle</option>
+                        <option value="craft">Craft</option>
+                        </select>
+                </div>
+
+                <button type="submit" class="btn-submit-question">Post Question</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+    <script src="assets/js/post_project.js"></script>
+
+</body>

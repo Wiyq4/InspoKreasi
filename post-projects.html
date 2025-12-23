@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post a Project</title>
+  <link rel="stylesheet" href="assets/css/post_project.css">
+  <link rel="icon" type="image/x-icon" href="/img/white-logo.png">
+</head>
+<body>
+<header class="top-nav">
+
+    <div class="logo-section">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo2 (2).png" alt="Logo" class="logo-img"></a>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <div class="search-container">
+            <div class="search-bar" id="searchBar">
+                <svg class="search-svg" viewBox="0 0 24 24">
+                    <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+                </svg>
+                <input type="text" class="search-input" placeholder="Search DIY ideas here">
+            </div>
+
+            <!-- POPUP SEARCH BOX -->
+            <div class="search-popup" id="searchPopup">
+                <h3>POPULAR SEARCHES</h3>
+
+                <div class="popular-list">
+                    <span>Organize</span>
+                    <span>Build</span>
+                    <span>Upcycle</span>
+                    <span>Craft</span>
+                    <span>Decorate</span>
+                    <span>Grow</span>
+                    <span>Shaving Cream</span>
+                    <span>Storage</span>
+                    <span>Vinegar</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="explore-projects.html">Explore Projects ▾</a></li>
+            <li><a href="post-projects.html">+ Post Project</a></li>
+            <li><a href="ask-diy.html">Ask DIY Question</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+  <section class="form-section">
+    <h2>Post a Project</h2>
+    <form>
+      <input type="text" maxlength="70" placeholder="Give your project a title" class="title-input">
+      <textarea placeholder="Give a brief introduction... (We recommend at least 30 words for optimal visibility)" class="intro-text"></textarea>
+
+      <div class="formatting-toolbar">
+        <button type="button"><b>B</b></button>
+        <button type="button"><i>I</i></button>
+        <button type="button"><u>U</u></button>
+        <button type="button"><s>S</s></button>
+        <button type="button">{"<>"}</button>
+        <button type="button">📷</button>
+        <button type="button">🎥</button>
+        <button type="button">🔗</button>
+      </div>
+
+      <div class="media-buttons">
+        <button type="button">Photo</button>
+        <button type="button">Video</button>
+        <button type="button">Media Link</button>
+      </div>
+
+      <p class="word-count">Post Word Count 0</p>
+    </form>
+  </section>
+
+    <script src="assets/js/post_project.js"></script>
+
+</body>
+</html>

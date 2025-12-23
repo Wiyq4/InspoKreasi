@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playwrite+DE+Grund:wght@400;600&family=Mulish:wght@400;600&display=swap");
+
+/* ======================================= */
+/* 0. GLOBAL & BASE STYLES */
+/* ======================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #F9F3EC;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to  { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ======================================= */
+/* 1. NAVBAR TRANSPARAN & DROPDOWN */
+/* ======================================= */
+header {
+    width: 100%;
+    padding: 20px 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+
+.logo a {
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    transition: opacity 0.3s;
+}
+
+.logo a:hover {
+    opacity: 0.85;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 32px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    list-style: none;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+    padding: 8px 0;
+}
+
+.dropdown-menu li a {
+    color: #000 !important;
+    font-size: 16px;
+    text-shadow: none;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* ======================================= */
+/* 2. HERO SECTION (CONTACT HEADER) */
+/* ======================================= */
+.hero {
+    width: 100%;
+    height: 40vh;
+    background: url("img/bannerdiy.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #F9F3EC;
+    padding-top: 100px;
+}
+
+/* Overlay gelap */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+
+/* ======================================= */
+/* 3. CONTACT INFO BOXES */
+/* ======================================= */
+.contact-container {
+    max-width: 1100px;
+    margin: 50px auto 0 auto; /* Memberi jarak positif 50px dari Hero Section */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+    position: relative;
+    z-index: 50;
+    padding: 0 20px;
+}
+
+.contact-box {
+    flex: 1 1 200px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border-top: 4px solid #E5AA70;
+}
+
+.contact-box h2 {
+    font-size: 20px;
+    font-family: "Playwrite DE Grund", cursive;
+    color: #E5AA70;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 5px;
+}
+
+.contact-box i {
+    color: #E5AA70;
+    margin-right: 8px;
+}
+
+
+/* ======================================= */
+/* 4. FORM & MAP LAYOUT */
+/* ======================================= */
+
+.contact-form-map {
+    padding: 80px 0;
+    background: #F9F3EC;
+}
+
+.contact-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.contact-heading h2 {
+    font-size: 32px;
+    font-family: "Playwrite DE Grund", cursive;
+    color: #2b2b2b;
+    margin-bottom: 15px;
+}
+
+.contact-heading p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* CONTAINER FLEX UNTUK FORM & MAP */
+.contact-content {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    gap: 50px;
+    padding: 0 20px;
+    align-items: stretch;
+}
+
+.contact-form-section,
+.map-section {
+    flex: 1;
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* FORM STYLES */
+.contact-form-section .contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mengatur input agar sejajar di baris pertama */
+.contact-form .form-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    flex: 1 1 45%; /* Memastikan input nama & email berbagi ruang */
+    margin-bottom: 0; /* Hapus margin bawah jika di dalam form-group flex */
+}
+
+/* Input yang seharusnya 100% (Subject & Textarea) */
+.contact-form .form-group:nth-child(3) input { /* Subject */
+    flex: 1 1 100%;
+}
+.contact-form .form-group:nth-child(4) textarea { /* Message */
+    flex: 1 1 100%;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    font-family: "Mulish", sans-serif;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px; /* Tinggi default textarea */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #E5AA70;
+    box-shadow: 0 0 5px rgba(229,170,112,0.4);
+}
+
+/* Tombol kirim */
+.contact-form .btn {
+    background: #E5AA70;
+    color: #fff;
+    font-family: "Playwrite DE Grund", cursive;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 5px;
+    width: auto; /* Tombol menyesuaikan isi */
+    align-self: flex-start; /* Meletakkan tombol di kiri */
+}
+
+.contact-form .btn:hover {
+    background: #d4935e;
+    transform: translateY(-2px);
+}
+
+/* MAP STYLES */
+.map-section h2 {
+    font-size: 20px;
+    color: #2b2b2b;
+    font-family: "Playwrite DE Grund", cursive;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    width: 100%;
+    /* Rasio aspek untuk map container agar responsif dan mengisi tinggi yang sama dengan form */
+    padding-bottom: 75%; 
+    position: relative;
+}
+
+.map-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}

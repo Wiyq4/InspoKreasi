@@ -1,0 +1,799 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #F9F3EC;
+}
+
+/* ===== NAVBAR TRANSPARAN ===== */
+header {
+    width: 100%;
+    padding: 20px 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+
+
+.logo a {
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.logo a:hover {
+    opacity: 0.85;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* ===== DROPDOWN ===== */
+/* .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 32px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    list-style: none;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+    padding: 8px 0;
+}
+
+.dropdown-menu li a {
+    color: #000 !important;
+    font-size: 16px;
+    text-shadow: none;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+} */
+
+/* ===== HERO ===== */
+.hero {
+    width: 100%;
+    height: 75vh;
+    background: url("img/bannerdiy.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+    color: #F9F3EC;
+}
+
+/* Overlay gelap */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Wrapper agar tetap center */
+.hero-search-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Kontainer pencarian */
+.search-container {
+    position: relative;
+    width: 400px; /* Biar tidak terlalu lebar */
+}
+
+/* Baris input + tombol */
+.search-box-row {
+    display: flex;
+    gap: 10px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Tombol Cari */
+.search-btn {
+    padding: 12px 18px;
+    border: none;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Dropdown */
+.search-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px; /* FIXED agar pas */
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.search-dropdown h4 {
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+}
+
+/* Tag popular */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #000;
+}
+
+.tags span {
+    padding: 8px 14px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.tags a {
+    text-decoration: none;
+    background: #f2f2f2;
+    color: #333;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.tags a:hover {
+    background-color: #ff6c0c;
+    color: #fff;
+}
+
+/* --- Bagian Kategori Slider --- */
+
+/* Container pembungkus utama untuk slider dan panah */
+.categories-section {
+    padding: 20px 0; /* Padding vertikal di atas dan bawah slider */
+    background-color: #F9F3EC; /* Warna latar belakang ringan untuk memisahkan bagian */
+}
+
+.categories-slider-container {
+    display: flex; 
+    align-items: center; /* Membuat panah sejajar vertikal di tengah */
+    width: 90%; /* Menggunakan lebar relatif */
+    max-width: 1200px; /* Batasan lebar maksimal */
+    margin: 0 auto; /* Menempatkan container di tengah */
+    position: relative; 
+}
+
+/* Container yang bisa digulir secara horizontal */
+.categories-slider {
+    display: flex;
+    overflow-x: scroll; /* Mengaktifkan scroll horizontal */
+    scroll-snap-type: x mandatory; /* Memastikan guliran berhenti di item */
+    padding: 10px 0; 
+    gap: 20px; /* Jarak horizontal antara item */
+    
+    /* Menyembunyikan Scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Menyembunyikan scrollbar di WebKit (Chrome, Safari) */
+.categories-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- Styling untuk Item Kategori --- */
+
+.category-item {
+    flex: 0 0 280px; /* Mencegah item menyusut, lebar tetap 280px */
+    height: 100px; /* Tinggi item */
+    border-radius: 12px;
+    background-color: #ffffff; /* Latar belakang item putih */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Efek bayangan yang halus */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    scroll-snap-align: start; /* Titik gulir */
+    text-decoration: none;
+}
+
+.category-item:hover {
+    transform: translateY(-3px); /* Efek angkat saat di-hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Area gambar di sisi kiri item */
+.category-image {
+    width: 40%; /* Lebar area gambar */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Teks kategori di sisi kanan item */
+.category-text {
+    width: 60%;
+    text-align: left;
+    padding: 0 15px;
+    font-size: 1.1em;
+    font-weight: 600; /* Sedikit tebal */
+    color: #333333;
+}
+
+
+
+/* --- Styling untuk Panah Navigasi --- */
+
+.arrow {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #555;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Pastikan panah berada di atas slider */
+    flex-shrink: 0; /* Mencegah panah menyusut */
+}
+
+.arrow:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.left-arrow {
+    margin-right: 15px;
+}
+
+.right-arrow {
+    margin-left: 15px;
+}
+
+/* New Projects Section */
+/* SECTION WRAPPER */
+.diy-section {
+    padding: 40px 70px;
+}
+
+.diy-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #1e1e1e;
+}
+
+/* GRID CONTAINER */
+.diy-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.diy-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* PERBAIKAN */
+    cursor: pointer;
+}
+
+.diy-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+}
+
+.diy-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.diy-content {
+    padding: 15px 18px 20px;
+}
+
+.diy-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #2b2b2b;
+    margin-bottom: 16px;
+}
+.diy-card .diy-content h3 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+
+/* AUTHOR */
+.diy-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.diy-author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.diy-author span {
+    font-size: 14px;
+}
+
+.video-section {
+    padding: 50px 80px;
+}
+
+.video-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.diy-card a,
+.video-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.diy-card > a,
+.video-card > a {
+    display: block;
+}
+
+.diy-author a,
+.author a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit; 
+}
+
+.diy-card a:hover h3,
+.video-card a:hover h3 {
+    text-decoration: none;
+    color: inherit;
+}
+
+.diy-author a:hover,
+.author a:hover {
+    color: #E5AA70;   
+}
+
+
+/* CARD */
+.video-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Shadow dasar */
+    transition: 0.25s ease; /* Animasi smooth */
+}
+
+.video-card:hover {
+    box-shadow: 0 8px 22px rgba(0,0,0,0.22); /* Shadow kuat ketika hover */
+}
+
+.video-card
+/* IMAGE */
+.video-thumb {
+    width: 198px;
+    height: 228px;
+    object-fit: cover;
+}
+
+/* TEXT AREA */
+.video-content {
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px; /* jarak antar elemen */
+}
+
+/* GARIS PEMBATAS */
+.video-divider {
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+    margin: 8px 0 0;
+}
+
+
+.video-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.video-content p {
+    margin: 8px 0 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* AUTHOR */
+.author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.author-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* SECTION */
+.ask-section {
+    padding: 40px 70px;
+    background: #F9F3EC;
+}
+
+/* HEADER */
+.ask-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ask-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.see-all {
+    color: #00A1CE;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* SUBTITLE */
+.ask-subtitle {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+/* GRID */
+.ask-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* CARD */
+.ask-card {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid #eee;
+    transition: 0.25s;
+    align-items: flex-start;
+}
+
+.ask-card:hover {
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+    transform: translateY(-2px);
+}
+
+/* LEFT CONTENT */
+.ask-left {
+    width: 70%;
+}
+
+/* CLICKABLE TITLE */
+.ask-title-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.ask-title-link h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* NO HOVER ON TITLE */
+.ask-title-link:hover h3 {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* AUTHOR LINK (pembungkus) */
+.ask-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #000; /* warna default hitam */
+}
+
+/* FOTO AUTHOR */
+.ask-author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* NAMA AUTHOR */
+.author-name {
+    font-size: 13px;
+    color: inherit; /* ikut warna ask-author */
+}
+
+/* HOVER */
+.ask-author:hover {
+    color: #E5AA70;   /* warna hover */
+}
+
+
+
+/* DESCRIPTION */
+.ask-desc {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.4em;
+}
+
+/* BUTTON */
+.ask-btn {
+    padding: 6px 18px;
+    background: #fff;
+    border: 1.5px solid #00A1CE;
+    border-radius: 20px;
+    color: #00A1CE;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.ask-btn:hover {
+    background: #00A1CE;
+    color: white;
+}
+
+/* THUMBNAIL */
+.ask-thumb {
+    width: 115px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Remove unwanted hover */
+.ask-thumb:hover {
+    opacity: 1;
+}
+
+/* COMMUNITY BOX */
+.ask-community {
+    padding: 20px;
+}
+
+.ask-community h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.ask-link {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00A1CE;
+    text-decoration: none;
+}
+
+.ask-link:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Styling untuk elemen footer utama */
+.footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Bagian Link Navigasi */
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    margin: 0 10px;
+    color: #555;
+    text-decoration: none;
+}
+
+/* Bagian Ikon Media Sosial */
+.footer-social {
+    margin: 15px 0;
+}
+
+.social-text {
+    margin-right: 10px;
+}
+
+.social-icon-link {
+    margin: 0 5px;
+    /* Menghilangkan border atau efek link bawaan */
+    text-decoration: none; 
+}
+
+/* Bagian Hak Cipta */
+.footer-copyright {
+    color: #777;
+    font-size: 14px;
+}
+
+.copyright-link {
+    color: #555;
+    text-decoration: underline;
+}
+/* OVERLAY */
+#mobileWarning{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* BOX */
+.mobile-warning-box{
+    background: #fff;
+    padding: 24px;
+    max-width: 320px;
+    text-align: center;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+}
+
+.mobile-warning-box h2{
+    margin-bottom: 10px;
+}
+
+.mobile-warning-box button{
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    background: #ff6c0c;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 25px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .search-box {
+        max-width: 90%;
+    }
+}
