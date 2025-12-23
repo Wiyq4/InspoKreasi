@@ -225,9 +225,9 @@ nav ul li a {
 
 .hero-build,
 .hero-grow,
-.hero-organize
-.hero-craft
-.hero-upcycle
+.hero-organize,
+.hero-craft,
+.hero-upcycle,
 .hero-decorate {
     height: 350px;
     background-size: cover;
@@ -769,6 +769,7 @@ nav ul li a {
     text-decoration: underline;
 
 }
+
 
 
 
