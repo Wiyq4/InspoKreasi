@@ -93,7 +93,7 @@ nav ul li:hover .dropdown-menu {
 .hero {
     width: 100%;
     height: 75vh;
-    background: url("img/bannerdiy.jpg") center/cover no-repeat;
+    background: url("../../img/bannerdiy.jpg") center/cover no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
@@ -797,3 +797,4 @@ nav ul li:hover .dropdown-menu {
         max-width: 90%;
     }
 }
+
