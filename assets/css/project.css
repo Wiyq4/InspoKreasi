@@ -226,6 +226,7 @@ nav ul li a {
     height: 350px;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 
@@ -762,4 +763,5 @@ nav ul li a {
     text-decoration: underline;
 
 }
+
 
