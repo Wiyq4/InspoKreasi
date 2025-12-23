@@ -218,7 +218,6 @@ nav ul li a {
 /* ================= HERO ================= */
 .hero-build {
     height: 350px;
-    background-image: var(--hero-bg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -755,4 +754,5 @@ nav ul li a {
 .copyright-link {
     color: #555;
     text-decoration: underline;
+
 }
