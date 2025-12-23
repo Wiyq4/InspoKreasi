@@ -219,10 +219,16 @@ nav ul li a {
 .hero-build   { background-image: url("../../img/build.jpg"); }
 .hero-grow    { background-image: url("../../img/grow.jpg"); }
 .hero-organize{ background-image: url("../../img/organize.jpg"); }
+.hero-craft{ background-image: url("../../img/craft.jpg"); }
+.hero-upcycle{ background-image: url("../../img/upcycle.jpg"); }
+.hero-decorate{ background-image: url("../../img/decorate.jpg"); }
 
 .hero-build,
 .hero-grow,
-.hero-organize {
+.hero-organize
+.hero-craft
+.hero-upcycle
+.hero-decorate {
     height: 350px;
     background-size: cover;
     background-position: center;
@@ -763,5 +769,6 @@ nav ul li a {
     text-decoration: underline;
 
 }
+
 
 
